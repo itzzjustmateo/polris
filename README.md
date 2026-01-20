@@ -79,6 +79,22 @@ Your feedback, issues, and PRs are welcome! See [CONTRIBUTING.md](CONTRIBUTING.m
 
 ---
 
+## 📜 Versioning
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for all commits in this repository to provide clear meaning and automated versioning.
+
+Polaris uses a custom version format shown in this README and in `package.json` (e.g., `b1.0.0`):
+
+- The **first letter** indicates the release channel:
+  - `b` = beta, `a` = alpha, `pr` = pre-release, `r` = release // nothing = release
+- The **first number** (`1` in `b1.0.0`) is the major version (breaking changes or significant milestones)
+- The **second number** (`0` in `b1.0.0`) is for big features and changes that are not breaking/major
+- The **third number** (`0` in `b1.0.0`) is incremented for small changes and bug fixes
+
+For example, `b1.0.4` is Beta, first major milestone, no new big features recently, and 4 small fixes or updates since last big change.
+
+---
+
 ## ☁️ Deploy
 
 Deploy your own Polaris instance with [Vercel](https://vercel.com/) or any platform supporting Next.js apps.
