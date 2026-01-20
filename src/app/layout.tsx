@@ -1,14 +1,16 @@
+import { ThemeProvider } from "@/components/provider/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -54,43 +56,55 @@ export const metadata: Metadata = {
     url: "https://polaris.vercel.app",
     type: "website",
     siteName: "Polaris",
-    images: [
-      {
-        url: "https://polaris.example.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Polaris AI-powered code editor open graph image",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://polaris.example.com/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Polaris AI-powered code editor open graph image",
+    //   },
+    // ],
   },
-  twitter: {
-    card: "summary_large_image",
-    site: "@polaris",
-    creator: "@polaris",
-    title: "Polaris – AI-Powered Code Editor & IDE",
-    description:
-      "Polaris is a professional AI-first IDE featuring CodeMirror 6, Claude-powered code suggestions, in-browser execution, SaaS business layer, and GitHub integration.",
-    images: ["https://polaris.example.com/og-image.png"],
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   site: "@polaris",
+  //   creator: "@polaris",
+  //   title: "Polaris – AI-Powered Code Editor & IDE",
+  //   description:
+  //     "Polaris is a professional AI-first IDE featuring CodeMirror 6, Claude-powered code suggestions, in-browser execution, SaaS business layer, and GitHub integration.",
+  //   images: ["https://polaris.vercel.app/og-image.png"],
+  // },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    // apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+        className={
+          cn(
+            fontSans.variable,
+            fontMono.variable,
+            'min-h-screen antialiased',
+          )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

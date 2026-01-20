@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Block internal / sensitive routes
+Disallow: /api/
+Disallow: /auth/
+Disallow: /dashboard/
+Disallow: /panel/
+Disallow: /settings/
+Disallow: /billing/
+Disallow: /internal/
+Disallow: /jobs/
+Disallow: /agents/
+
+# Sitemap
+# Sitemap: https://polaris.yourdomain.com/sitemap.xml
