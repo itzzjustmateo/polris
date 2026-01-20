@@ -107,7 +107,7 @@ export default function RedirectPage() {
 
                         <div className="rounded-lg bg-accent/10 p-4 border border-accent/20 ring-1 ring-accent/10">
                             <div className="flex items-start gap-3">
-                                <ExternalLink className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
+                                <ExternalLink className="h-5 w-5 text-accent-foreground mt-0.5 shrink-0" />
                                 <div className="flex-1 min-w-0 space-y-1">
                                     <p className="text-sm font-medium text-foreground">Destination URL:</p>
                                     <p className="text-sm text-muted-foreground break-all font-mono">
@@ -121,15 +121,15 @@ export default function RedirectPage() {
                             <h4 className="text-sm font-medium text-foreground">Security Information:</h4>
                             <ul className="space-y-2 text-sm">
                                 <li className="flex items-center gap-2 text-muted-foreground">
-                                    <div className="h-2 w-2 rounded-full bg-chart-2 flex-shrink-0"></div>
+                                    <div className="h-2 w-2 rounded-full bg-chart-2 shrink-0"></div>
                                     <span>Secure HTTPS connection</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-muted-foreground">
-                                    <div className="h-2 w-2 rounded-full bg-chart-2 flex-shrink-0"></div>
+                                    <div className="h-2 w-2 rounded-full bg-chart-2 shrink-0"></div>
                                     <span>Official Devflare domain</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-muted-foreground">
-                                    <div className="h-2 w-2 rounded-full bg-chart-2 flex-shrink-0"></div>
+                                    <div className="h-2 w-2 rounded-full bg-chart-2 shrink-0"></div>
                                     <span>SSL/TLS encrypted</span>
                                 </li>
                             </ul>
@@ -177,7 +177,7 @@ export default function RedirectPage() {
 
                 <div className="mt-6 text-center text-sm text-muted-foreground">
                     <div className="flex items-center justify-center gap-2">
-                        <Globe className="h-4 w-4 flex-shrink-0" />
+                        <Globe className="h-4 w-4 shrink-0" />
                         <p>This redirect is provided by Devflare services</p>
                     </div>
                 </div>
