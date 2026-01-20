@@ -85,6 +85,12 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
+/**
+ * Root layout component that wraps the application with Clerk and theme providers, renders authentication controls in a header, and hosts page content.
+ *
+ * @param children - The page content to render inside the layout
+ * @returns The root HTML structure containing ClerkProvider, ThemeProvider, a header with authentication controls (Sign In / Sign Up or UserButton), and the provided `children`
+ */
 export default function RootLayout({
   children,
 }: {
