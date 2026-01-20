@@ -25,9 +25,9 @@ Before deploying, ensure you have:
 
 - [ ] **GitHub Account** - For repository access and OAuth
 - [ ] **Vercel Account** - For hosting (or alternative platform)
-- [ ] **Database Provider** - Neon, Supabase, or PlanetScale
+- [ ] **Database Provider** - Convex (recommended), Neon, Supabase, or PlanetScale
 - [ ] **Clerk Account** - For authentication
-- [ ] **Anthropic Account** - For Claude AI API
+- [ ] **Anthropic Account** - For Claude AI API (or any other AI provider)
 
 ### Optional Services
 
@@ -55,7 +55,7 @@ The fastest way to deploy Polaris:
 
 ```bash
 # Install Vercel CLI
-npm i -g vercel
+bun i -g vercel
 
 # Login to Vercel
 vercel login
@@ -83,9 +83,6 @@ cd polris
 ```bash
 # Using Bun (recommended)
 bun install
-
-# Or using npm
-npm install
 ```
 
 ### Step 3: Set Up Environment Variables
@@ -103,9 +100,6 @@ Fill in all required variables (see [Environment Variables](#environment-variabl
 ```bash
 # Build for production
 bun run build
-
-# Or with npm
-npm run build
 ```
 
 ### Step 5: Start the Production Server
@@ -113,9 +107,6 @@ npm run build
 ```bash
 # Start the server
 bun start
-
-# Or with npm
-npm start
 ```
 
 Your app will be available at `http://localhost:3000`
