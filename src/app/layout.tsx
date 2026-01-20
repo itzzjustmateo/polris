@@ -1,5 +1,8 @@
 import { ThemeProvider } from "@/components/provider/theme-provider";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
     "code export",
     "repository management",
     "Cursor",
-    "Cursor Opertunity"
+    "Cursor opportunity"
   ],
   authors: [{ name: "DevFlare Team", url: "https://dc.gg/developer" }],
   creator: "DevFlare Team",
@@ -88,24 +91,42 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={
-          cn(
-            fontSans.variable,
-            fontMono.variable,
-            'min-h-screen antialiased',
-          )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
+    <ClerkProvider
+      appearance={{
+        theme: dark,
+      }}>
+      <html lang="en" suppressHydrationWarning>
+        <body
+          className={
+            cn(
+              fontSans.variable,
+              fontMono.variable,
+              'min-h-screen antialiased',
+            )}
         >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <header>
+              <SignedOut>
+                <SignInButton />
+                <SignUpButton>
+                  <Button variant={"secondary"}>
+                    Sign Up
+                  </Button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </header>
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
