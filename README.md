@@ -1,106 +1,105 @@
-# Polaris: AI-Powered Code Editor & Professional IDE
+# Polaris: Get Started in Minutes ✨
 
-Polaris is a cutting-edge, AI-powered code editor and professional IDE, designed to supercharge your productivity and unlock seamless software development in your browser.
-
----
-
-## ✨ Features
-
-- **Modern Code Editor:**  
-  Powered by [CodeMirror 6](https://codemirror.net/6/), Polaris delivers:
-  - Syntax highlighting for dozens of languages
-  - Code folding and indentation guides
-  - Minimap navigation
-  - Multi-cursor editing and search
-
-- **AI-Assisted Development:**  
-  - Integrated AI code suggestions, explanations, and quick edits with [Claude](https://claude.ai/)
-  - Inline and contextual assistance for smarter coding
-  - "Quick Edit" and refactoring powered by LLMs
-
-- **In-Browser Code Execution:**  
-  - True sandboxed execution using [WebContainer](https://webcontainers.io/) for Node.js projects
-  - Live web preview—see your app as you code
-  - Run scripts & jobs in the background via AI agents (multi-tool capable)
-
-- **Full GitHub Integration:**  
-  - Import/export entire repositories
-  - Transparent commit, branch, and PR management directly from the IDE
-  - GitHub OAuth authentication out of the box
-
-- **Professional SaaS Layer:**  
-  - Authentication, user management, and billing ready
-  - Organization-level workspaces
-
-- **LLM Monitoring & Error Tracking:**  
-  - Realtime error tracing for code execution and AI agent usage
-  - Analytics and observability tools for AI actions
+Polaris is an AI-powered code editor and professional IDE—in your browser, ready to accelerate every developer.
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-After installing dependencies, run:
+1. **Clone the Repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev #  Recommended
+git clone https://github.com/itzzjustmateo/polris.git
+cd polris
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to experience the Polaris DX.
+2. **Install Dependencies**
+
+Choose the package manager you prefer ([Bun](https://bun.sh/) recommended):
+
+```bash
+# Using Bun (recommended)
+bun install
+
+# Or, using NPM
+npm install
+
+# Or, using PNPM
+pnpm install
+
+# Or, using Yarn
+yarn install
+```
+
+3. **Run Polaris Locally**
+
+```bash
+# Bun
+bun dev
+
+# Or, using NPM
+npm run dev
+
+# Or, with PNPM
+pnpm dev
+
+# Or, with Yarn
+yarn dev
+```
+
+Polaris will start at [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 📝 Usage Highlights
+## 📝 Basic Usage
 
-- Open files and folders side-by-side, switch themes, and leverage the rich minimap.
-- Use `Cmd+K` for the command palette, and trigger AI suggestions with `Cmd+Enter` or via the Quick Edit button.
-- Log in with GitHub to manage your repositories, branches, and PRs directly in Polaris.
-
----
-
-## 💡 Resources
-
-- [Polaris Documentation](#) *(coming soon)*
-- [CodeMirror 6 Guide](https://codemirror.net/6/docs/)
-- [WebContainer Documentation](https://webcontainers.io/docs/)
-- [Claude API](https://docs.anthropic.com/claude/docs)
+- Open, edit, and search files with **multi-cursor** support. [SOON]
+- Press `Cmd+K` for the command palette. [SOON]
+- Get AI coding help using `Cmd+Enter` or the **Quick Edit** button. [SOON]
+- Log in with GitHub to manage repositories and branches right from Polaris. [SOON]
 
 ---
 
-## 📦 Contributing
+## ✨ Main Features
 
-Your feedback, issues, and PRs are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+- **Modern, Fast Code Editor** – Powered by [CodeMirror 6](https://codemirror.net/6/), with syntax highlighting, folding, minimap, and more. [SOON]
+- **AI Assistance** – Inline code completion, explanations, and refactoring via [Claude](https://claude.ai/). [SOON]
+- **Instant Code Execution** – Run Node.js projects in-browser via [WebContainer](https://webcontainers.io/). [SOON]
+- **Full GitHub Integration** – Import/export repos, commit, branch, and PR—all in-app. [SOON]
+- **SaaS Ready** – Auth, org workspaces, and billing built-in. [SOON]
+- **Monitoring & Analytics** – Real-time error and LLM agent tracking for observability. [SOON]
+
+---
+
+## ☁️ Deploy Your Own
+
+Polaris can be deployed on [Vercel](https://vercel.com/) or anywhere supporting Next.js.
+
+See [`docs/deployment.md`](docs/deployment.md) for a walkthrough.
+
+---
+
+## 🙌 Contributing
+
+Found a bug or want to propose a feature? We welcome issues and PRs! Read our [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+---
+
+## 🔗 Resources
+
+- [CodeMirror 6 Documentation](https://codemirror.net/6/docs/) [SOON]
+- [WebContainer Docs](https://webcontainers.io/docs/) [SOON]
+- [Claude API Reference](https://docs.anthropic.com/claude/docs) [SOON]
 
 ---
 
 ## 📜 Versioning
 
-We follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for all commits in this repository to provide clear meaning and automated versioning.
-
-Polaris uses a custom version format shown in this README and in `package.json` (e.g., `b1.0.0`):
-
-- The **first letter** indicates the release channel:
-  - `b` = beta, `a` = alpha, `pr` = pre-release, `r` = release // nothing = release
-- The **first number** (`1` in `b1.0.0`) is the major version (breaking changes or significant milestones)
-- The **second number** (`0` in `b1.0.0`) is for big features and changes that are not breaking/major
-- The **third number** (`0` in `b1.0.0`) is incremented for small changes and bug fixes
-
-For example, `b1.0.4` is Beta, first major milestone, no new big features recently, and 4 small fixes or updates since last big change.
+Polaris follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Our version format:
+- `b1.2.3` = Beta, major 1, minor 2, patch 3
+- `a`, `pr`, `r` = alpha, pre-release, release
+- No prefix = stable release
 
 ---
 
-## ☁️ Deploy
-
-Deploy your own Polaris instance with [Vercel](https://vercel.com/) or any platform supporting Next.js apps.
-
-- For deployment instructions, see [`docs/deployment.md`](docs/deployment.md) or [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
-
----
-
-Polaris is open-source, built by and for developers. Let us help you write, ship, and reason about your code—faster, smarter, and together.
+Polaris is open-source and built for developers. Build, ship, and collaborate—faster, smarter, together.
