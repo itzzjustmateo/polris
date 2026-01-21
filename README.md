@@ -95,10 +95,17 @@ Found a bug or want to propose a feature? We welcome issues and PRs! Read our [C
 
 ## 📜 Versioning
 
-Polaris follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). Our version format:
-- `b1.2.3` = Beta, major 1, minor 2, patch 3
-- `a`, `pr`, `r` = alpha, pre-release, release
-- No prefix = stable release
+Polaris adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to maintain clear and consistent commit messages.
+
+**Release versioning scheme (see `package.json`):**
+
+- `b1.2.3` — **Beta:** major 1, minor 2, patch 3
+- `a1.2.3` — **Alpha**
+- `pr1.2.3` — **Pre-release**
+- `r1.2.3` — **Release candidate**
+- `1.2.3` — **Stable release** (no prefix)
+
+This approach ensures straightforward tracking of releases. For more details, see the [Changelog](CHANGELOG.md).
 
 ---
 
